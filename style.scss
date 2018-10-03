@@ -1,7 +1,72 @@
+$primary-color: #008D83;
+$hover-color: #093999;
+$font-stack: 'Cabin', sans-serif;
+$font-headlines: 'Lobster', sans-serif;
+$font-size-banner: 2em;
+$font-size-default: 22px;
+
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-h1 {
-    font-family: 'Lobster', sans-serif;
+body {
+    font-family: $font-stack;
+    font-size: $font-size-default;
+}
+
+p {
+    margin: 1rem 0;
+}
+
+.banner {
+    h1 {
+        font-family: $font-headlines;
+        color: $primary-color;
+        font-size: $font-size-banner;
+        margin: 1rem 0;
+        text-align: center;
+    }
+}
+
+#topnav {
+    ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+
+        li {
+            flex: 1 1 auto;
+            background: $primary-color;
+            text-align: center;
+            height: 2rem;
+            :hover {
+                background: $hover-color;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+                display: block;
+                line-height: 2rem;
+            }
+        }
+    }
+}
+
+.premisesimg {
+    margin: 1rem auto;
+    width: 95%;
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+.suppliers {
+    display: grid;
 }
