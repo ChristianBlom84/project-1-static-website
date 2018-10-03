@@ -4,9 +4,12 @@
   padding: 0;
 }
 
+html {
+  font-size: 22px;
+}
+
 body {
   font-family: "Cabin", sans-serif;
-  font-size: 22px;
 }
 
 p {
@@ -16,7 +19,7 @@ p {
 .banner h1 {
   font-family: "Lobster", sans-serif;
   color: #008D83;
-  font-size: 2em;
+  font-size: 2rem;
   margin: 1rem 0;
   text-align: center;
 }
@@ -47,6 +50,10 @@ p {
   line-height: 2rem;
 }
 
+main {
+  padding: 0 0.5rem;
+}
+
 .premisesimg {
   margin: 1rem auto;
   width: 95%;
@@ -60,4 +67,36 @@ p {
 
 .suppliers {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(143.5px, 1fr));
+  grid-gap: 0.5rem;
+  align-items: center;
+}
+
+.suppliers img {
+  width: 100%;
+  display: block;
+}
+
+@media screen and (min-width: 720px) {
+  .banner {
+    display: flex;
+    justify-content: space-between;
+  }
+  .banner h1 {
+    margin: 0;
+  }
+  #topnav {
+    order: -1;
+  }
+  #topnav ul {
+    flex-flow: row nowrap;
+    justify-content: left;
+  }
+  #topnav ul li {
+    flex: 0 0 auto;
+    height: 1.5rem;
+  }
+  #topnav ul li a {
+    line-height: 1.5rem;
+  }
 }

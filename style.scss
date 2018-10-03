@@ -2,8 +2,11 @@ $primary-color: #008D83;
 $hover-color: #093999;
 $font-stack: 'Cabin', sans-serif;
 $font-headlines: 'Lobster', sans-serif;
-$font-size-banner: 2em;
+$font-size-banner: 2rem;
 $font-size-default: 22px;
+$main-padding: 0.5rem;
+$suppliers-width: (320px - (1.5 * $font-size-default)) / 2;
+$break-medium: 720px;
 
 * {
     box-sizing: border-box;
@@ -11,9 +14,12 @@ $font-size-default: 22px;
     padding: 0;
 }
 
+html {
+    font-size: $font-size-default;
+}
+
 body {
     font-family: $font-stack;
-    font-size: $font-size-default;
 }
 
 p {
@@ -57,6 +63,10 @@ p {
     }
 }
 
+main {
+    padding: 0 0.5rem;
+}
+
 .premisesimg {
     margin: 1rem auto;
     width: 95%;
@@ -69,4 +79,41 @@ p {
 
 .suppliers {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($suppliers-width, 1fr));
+    grid-gap: 0.5rem;
+    align-items: center;
+    img {
+        width: 100%;
+        display: block;
+    }
+}
+
+@media screen and (min-width: $break-medium) {
+
+    .banner {
+        display: flex;
+        justify-content: space-between;
+
+        h1 {
+            margin: 0;
+        }
+    }
+
+    #topnav {
+        order: -1;
+        ul {
+            flex-flow: row nowrap;
+            justify-content: left;
+    
+            li {
+                flex: 0 0 auto;
+                height: 1.5rem;
+    
+                a {
+                    line-height: 1.5rem;
+                }
+            }
+        }
+    }
+
 }
