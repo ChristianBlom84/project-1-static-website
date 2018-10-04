@@ -16,6 +16,7 @@ $break-medium: 720px;
 
 html {
     font-size: $font-size-default;
+    line-height: 1.5;
 }
 
 body {
@@ -38,6 +39,7 @@ p {
 
 #topnav {
     ul {
+        height: 100%;
         list-style: none;
         padding: 0;
         display: flex;
@@ -93,6 +95,7 @@ main {
     .banner {
         display: flex;
         justify-content: space-between;
+        align-items: stretch;
 
         h1 {
             margin: 0;
@@ -103,17 +106,30 @@ main {
         order: -1;
         ul {
             flex-flow: row nowrap;
-            justify-content: left;
+            align-items: center;
     
             li {
-                flex: 0 0 auto;
-                height: 1.5rem;
+                flex: 1 1 auto;
+                height: 100%;
+                // padding: 1rem;
     
                 a {
-                    line-height: 1.5rem;
+                    line-height: 3rem;
+                    padding: 0 0.5rem;
                 }
             }
         }
+    }
+
+    .premisesimg {
+        margin: 0 1rem 1rem;
+        float: left;
+        width: 50%;
+    }
+
+    .supplierswrapper {
+        margin: 2rem 0;
+        clear: both;
     }
 
 }

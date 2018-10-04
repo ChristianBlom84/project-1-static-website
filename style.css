@@ -1,11 +1,13 @@
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 html {
   font-size: 22px;
+  line-height: 1.5;
 }
 
 body {
@@ -25,15 +27,25 @@ p {
 }
 
 #topnav ul {
+  height: 100%;
   list-style: none;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #topnav ul li {
-  flex: 1 1 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   background: #008D83;
   text-align: center;
   height: 2rem;
@@ -66,10 +78,14 @@ main {
 }
 
 .suppliers {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(143.5px, 1fr));
+  -ms-grid-columns: (minmax(143.5px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(143.5px, 1fr));
   grid-gap: 0.5rem;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .suppliers img {
@@ -79,24 +95,51 @@ main {
 
 @media screen and (min-width: 720px) {
   .banner {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
   }
   .banner h1 {
     margin: 0;
   }
   #topnav {
-    order: -1;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
   }
   #topnav ul {
-    flex-flow: row nowrap;
-    justify-content: left;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   #topnav ul li {
-    flex: 0 0 auto;
-    height: 1.5rem;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    height: 100%;
   }
   #topnav ul li a {
-    line-height: 1.5rem;
+    line-height: 3rem;
+    padding: 0 0.5rem;
+  }
+  .premisesimg {
+    margin: 0 1rem 1rem;
+    float: left;
+    width: 50%;
+  }
+  .supplierswrapper {
+    margin: 2rem 0;
+    clear: both;
   }
 }
+/*# sourceMappingURL=style.css.map */
