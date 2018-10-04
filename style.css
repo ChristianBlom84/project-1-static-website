@@ -6,7 +6,7 @@
 }
 
 html {
-  font-size: 22px;
+  font-size: 18px;
   line-height: 1.5;
 }
 
@@ -80,8 +80,8 @@ main {
 .suppliers {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(143.5px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(143.5px, 1fr));
+  -ms-grid-columns: (minmax(97.66667px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(97.66667px, 1fr));
   grid-gap: 0.5rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -94,6 +94,9 @@ main {
 }
 
 @media screen and (min-width: 720px) {
+  p {
+    font-size: 22px;
+  }
   .banner {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -104,6 +107,7 @@ main {
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
+    background-image: #008D83;
   }
   .banner h1 {
     margin: 0;
@@ -112,8 +116,12 @@ main {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
+    width: 450px;
   }
   #topnav ul {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row nowrap;
@@ -124,13 +132,23 @@ main {
   }
   #topnav ul li {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
     height: 100%;
+    min-width: 100px;
+    background-color: none;
+    border-radius: 10px;
+  }
+  #topnav ul li :hover {
+    border-radius: 10px;
   }
   #topnav ul li a {
     line-height: 3rem;
     padding: 0 0.5rem;
+  }
+  main {
+    max-width: 900px;
+    margin: auto;
   }
   .premisesimg {
     margin: 0 1rem 1rem;

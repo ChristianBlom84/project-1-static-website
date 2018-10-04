@@ -3,9 +3,11 @@ $hover-color: #093999;
 $font-stack: 'Cabin', sans-serif;
 $font-headlines: 'Lobster', sans-serif;
 $font-size-banner: 2rem;
-$font-size-default: 22px;
+$font-size-default: 18px;
+$font-size-medium: 22px;
+$font-size-link-medium: 24px;
 $main-padding: 0.5rem;
-$suppliers-width: (320px - (1.5 * $font-size-default)) / 2;
+$suppliers-width: (320px - (1.5 * $font-size-default)) / 3;
 $break-medium: 720px;
 
 * {
@@ -92,33 +94,54 @@ main {
 
 @media screen and (min-width: $break-medium) {
 
+    p {
+        font-size: $font-size-medium;
+    }
+
     .banner {
         display: flex;
         justify-content: space-between;
         align-items: stretch;
+        background-image: $primary-color;
 
         h1 {
             margin: 0;
+            // color: white;
         }
     }
 
     #topnav {
         order: -1;
+        width: 450px;
         ul {
+            justify-content: space-between;
             flex-flow: row nowrap;
             align-items: center;
+            // min-width: 450px;
     
             li {
-                flex: 1 1 auto;
+                flex: 1 0 auto;
                 height: 100%;
+                min-width: 100px;
+                background-color: none;
+                border-radius: 10px;
+                :hover {
+                    border-radius: 10px;
+                }
                 // padding: 1rem;
     
                 a {
                     line-height: 3rem;
                     padding: 0 0.5rem;
+                    // font-size: $font-size-link-medium;
                 }
             }
         }
+    }
+
+    main {
+        max-width: 900px;
+        margin: auto;
     }
 
     .premisesimg {
