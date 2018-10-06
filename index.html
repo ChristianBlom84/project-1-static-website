@@ -14,37 +14,54 @@
     <header class="banner" role="banner">
         <h1>Café Koppen <i class="fas fa-coffee" aria-hidden="true"></i></h1>
         <nav id="topnav" role="navigation">
-            <ul role="navigation">
-                <li><a href="#">Meny</a></li>
-                <li><a href="#">Galleri</a></li>
-                <li><a href="#">Om Oss</a></li>
-                <li><a href="#">Kontakt</a></li>
+            <ul role="menubar">
+                <li><a href="#" role="menuitem">Meny</a></li>
+                <li><a href="#" role="menuitem">Galleri</a></li>
+                <li><a href="#" role="menuitem">Om Oss</a></li>
+                <li><a href="#" role="menuitem">Kontakt</a></li>
             </ul>
         </nav>
     </header>
     
     <main role="main">
         <section class="premisesimg">
-            <img src="images/background-cafe.jpg" alt="Café Koppens vackra lokaler" />
         </section>
 
         <article class="intro" role="article">
             <section>
-                <p>Här på Café Koppen älskar vi kaffe, det är en passion vi gärna delar med oss av till våra gäster.</p>
+                <p><img class="premisesimg" src="images/background-cafe.jpg" alt="Café Koppens vackra lokaler" />Här på Café Koppen älskar vi kaffe, det är en passion vi gärna delar med oss av till våra gäster.</p>
                 <p>Vi specialiserar oss på att importera de finaste och mest prisbelönta kaffebönorna från världens alla hörn.</p>
             </section>
 
             <section class="supplierswrapper">
                 <p>Här är ett axplock av våra leverantörer, klicka på logotypen för att besöka deras hemsida:</p>
                 <div class="suppliers">
-                    <a href="https://dragonflycoffeeroasters.com/" aria-label="Läs mer om Dragonfly Coffe Roaster på deras hemsida"><img src="images/dragonflylogo.png" alt="Dragonfly logo" /></a>
-                    <a href="https://www.jbccoffeeroasters.com/" aria-label="Läs mer om JBC Coffee Roaster på deras hemsida"><img src="images/jbclogo.png" alt="JBC logo" /></a>
-                    <a href="https://www.ptscoffee.com/" aria-label="Läs mer om PT's Coffee Roasting co. på deras hemsida"><img src="images/ptslogo.png" alt="PTs Coffee logo" /></a>
-                    <a href="https://www.willoughbyscoffee.com/" aria-label="Läs mer om Willoughbys Coffee and Tea på deras hemsida"><img src="images/willoughbyslogo.png" alt="Willoughbys logo" /></a>
-                    <a href="https://www.kakalovecafe.com.tw/" aria-label="Läs mer om KaKa Love på deras hemsida"><img src="images/kakalovelogo.png" alt="Kaka Love logo" /></a>
-                    <a href="https://www.birdrockcoffee.com/" aria-label="Läs mer om Bird Rock Coffee på deras hemsida"><img src="images/birdrocklogo.png" alt="Bird Rock logo" /></a>
+                    <a href="https://dragonflycoffeeroasters.com/" aria-label="Läs mer om Dragonfly Coffe Roaster på deras hemsida"><img src="images/dragonflylogo.png" alt="" /></a>
+                    <a href="https://www.jbccoffeeroasters.com/" aria-label="Läs mer om JBC Coffee Roaster på deras hemsida"><img src="images/jbclogo.png" alt="" /></a>
+                    <a href="https://www.ptscoffee.com/" aria-label="Läs mer om PT's Coffee Roasting co. på deras hemsida"><img src="images/ptslogo.png" alt="" /></a>
+                    <a href="https://www.willoughbyscoffee.com/" aria-label="Läs mer om Willoughbys Coffee and Tea på deras hemsida"><img src="images/willoughbyslogo.png" alt="" /></a>
+                    <a href="https://www.kakalovecafe.com.tw/" aria-label="Läs mer om KaKa Love på deras hemsida"><img src="images/kakalovelogo.png" alt="" /></a>
+                    <a href="https://www.birdrockcoffee.com/" aria-label="Läs mer om Bird Rock Coffee på deras hemsida"><img src="images/birdrocklogo.png" alt="" /></a>
                 </div>
             </section>
+        </article>
+
+        <article class="coffeeguide">
+            <div class="coffeewrapper">
+                <h2>Kaffeguide</h2>
+                <p>Espressodrycker kan vara en djungel, vad är egentligen skillnaden på en latte och en cappuccino? Hos oss kan du alltid beställa en vanlig kopp kaffe, med eller utan mjölk, gjord på bönor i världsklass. Känner du dig lite mer kontinental har vi en kort guide nedan för att hjälpa dig få grepp om espresson.</p>
+            </div>
+            <div class="pdfwrapper">
+                <section class="pdf">
+                    <object data="images/kaffemeny.pdf#view=Fit&scrollbar=0&toolbar=0" type="application/pdf" width="100%" height="100%">
+                        <p>Din browser stödjer inte .pdf-filer. Du kan ladda ner kaffeguiden här: <a aria-label="Ladda ner vår kaffeguide i pdf-format" href="images/kaffemeny.pdf">Ladda ner PDF</a>.</p>
+                    </object>
+                </section>
+            </div>
+        </article>
+
+        <article class="makeacoffee">
+                <iframe width="901" height="507" src="https://www.youtube.com/embed/gvPetTPFsZM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </article>
     </main>
 

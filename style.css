@@ -14,13 +14,20 @@ body {
   font-family: "Cabin", sans-serif;
 }
 
+h2,
+h3,
+h4 {
+  margin-top: 1rem;
+  font-family: "Lobster", sans-serif;
+}
+
 p {
   margin: 1rem 0;
 }
 
 .banner h1 {
   font-family: "Lobster", sans-serif;
-  color: #008D83;
+  color: #00857c;
   font-size: 2rem;
   margin: 1rem 0;
   text-align: center;
@@ -46,7 +53,7 @@ p {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  background: #008D83;
+  background: #00857c;
   text-align: center;
   height: 2rem;
 }
@@ -69,9 +76,6 @@ main {
 .premisesimg {
   margin: 1rem auto;
   width: 95%;
-}
-
-.premisesimg img {
   width: 100%;
   height: auto;
   display: block;
@@ -93,6 +97,11 @@ main {
   display: block;
 }
 
+.pdf {
+  height: 500px;
+  margin-top: 1rem;
+}
+
 @media screen and (min-width: 720px) {
   p {
     font-size: 22px;
@@ -101,27 +110,28 @@ main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
-    background-image: #008D83;
   }
   .banner h1 {
     margin: 0;
   }
   #topnav {
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
-    width: 450px;
+    width: 100%;
+    background-color: #00857c;
   }
   #topnav ul {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row nowrap;
@@ -136,7 +146,7 @@ main {
             flex: 1 0 auto;
     height: 100%;
     min-width: 100px;
-    background-color: none;
+    max-width: 150px;
     border-radius: 10px;
   }
   #topnav ul li :hover {
@@ -145,8 +155,11 @@ main {
   #topnav ul li a {
     line-height: 3rem;
     padding: 0 0.5rem;
+    color: white;
+    font-size: 24px;
   }
-  main {
+  article,
+  section {
     max-width: 900px;
     margin: auto;
   }
@@ -158,6 +171,42 @@ main {
   .supplierswrapper {
     margin: 2rem 0;
     clear: both;
+  }
+  .coffeeguide {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    max-width: none;
+    margin: 0;
+  }
+  .coffeewrapper {
+    max-width: 900px;
+  }
+  .pdfwrapper {
+    width: 100%;
+    margin: 0;
+  }
+  .pdf {
+    height: 800px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .pdfwrapper {
+    background: -webkit-gradient(linear, left top, right top, from(#00857c), color-stop(10%, #525659), color-stop(90%, #525659), to(#00857c));
+    background: linear-gradient(to right, #00857c 0%, #525659 10%, #525659 90%, #00857c 100%);
   }
 }
 /*# sourceMappingURL=style.css.map */

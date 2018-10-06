@@ -1,5 +1,6 @@
-$primary-color: #008D83;
+$primary-color: #00857c;
 $hover-color: #093999;
+$pdf-gradient-start: #525659;
 $font-stack: 'Cabin', sans-serif;
 $font-headlines: 'Lobster', sans-serif;
 $font-size-banner: 2rem;
@@ -9,6 +10,7 @@ $font-size-link-medium: 24px;
 $main-padding: 0.5rem;
 $suppliers-width: (320px - (1.5 * $font-size-default)) / 3;
 $break-medium: 720px;
+$break-large: 1200px;
 
 * {
     box-sizing: border-box;
@@ -23,6 +25,13 @@ html {
 
 body {
     font-family: $font-stack;
+}
+
+h2,
+h3,
+h4 {
+    margin-top: 1rem;
+    font-family: $font-headlines;
 }
 
 p {
@@ -74,11 +83,10 @@ main {
 .premisesimg {
     margin: 1rem auto;
     width: 95%;
-    img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
+    width: 100%;
+    height: auto;
+    display: block;
+
 }
 
 .suppliers {
@@ -92,6 +100,11 @@ main {
     }
 }
 
+.pdf {
+    height: 500px;
+    margin-top: 1rem;
+}
+
 @media screen and (min-width: $break-medium) {
 
     p {
@@ -100,9 +113,9 @@ main {
 
     .banner {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        flex-flow: column wrap;
         align-items: stretch;
-        background-image: $primary-color;
 
         h1 {
             margin: 0;
@@ -111,10 +124,11 @@ main {
     }
 
     #topnav {
-        order: -1;
-        width: 450px;
+        width: 100%;
+        background-color: $primary-color;
+
         ul {
-            justify-content: space-between;
+            justify-content: center;
             flex-flow: row nowrap;
             align-items: center;
             // min-width: 450px;
@@ -123,7 +137,8 @@ main {
                 flex: 1 0 auto;
                 height: 100%;
                 min-width: 100px;
-                background-color: none;
+                max-width: 150px;
+                // background-color: white;
                 border-radius: 10px;
                 :hover {
                     border-radius: 10px;
@@ -133,13 +148,20 @@ main {
                 a {
                     line-height: 3rem;
                     padding: 0 0.5rem;
-                    // font-size: $font-size-link-medium;
+                    color: white;
+                    font-size: $font-size-link-medium;
                 }
             }
         }
     }
 
-    main {
+    // main {
+    //     max-width: 900px;
+    //     margin: auto;
+    // }
+
+    article,
+    section {
         max-width: 900px;
         margin: auto;
     }
@@ -155,4 +177,35 @@ main {
         clear: both;
     }
 
+    .coffeeguide {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+        max-width: none;
+        margin: 0;
+    }
+
+    .coffeewrapper {
+        max-width: 900px;
+    }
+
+    .pdfwrapper {
+        width: 100%;
+        margin: 0;
+    }
+
+    .pdf {
+        height: 800px;
+        margin: auto;
+    }
+
+}
+
+@media screen and (min-width: $break-large) {
+
+    .pdfwrapper {
+        background: linear-gradient(to right, #00857c 0%,#525659 10%,#525659 90%,#00857c 100%);
+    }
 }
