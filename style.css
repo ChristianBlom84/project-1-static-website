@@ -25,6 +25,11 @@ p {
   margin: 1rem 0;
 }
 
+section,
+div {
+  padding: 0 0.5rem;
+}
+
 .banner h1 {
   font-family: "Lobster", sans-serif;
   color: #00857c;
@@ -70,12 +75,11 @@ p {
 }
 
 main {
-  padding: 0 0.5rem;
+  padding: 0;
 }
 
 .premisesimg {
   margin: 1rem auto;
-  width: 95%;
   width: 100%;
   height: auto;
   display: block;
@@ -102,7 +106,26 @@ main {
   margin-top: 1rem;
 }
 
-@media screen and (min-width: 720px) {
+.pdf object {
+  width: 100%;
+  height: 100%;
+}
+
+.makeacoffee {
+  margin-top: 1rem;
+}
+
+.videowrapper {
+  min-height: 200px;
+}
+
+iframe {
+  width: 100%;
+  min-height: 200px;
+  border: 0;
+}
+
+@media screen and (min-width: 600px) {
   p {
     font-size: 22px;
   }
@@ -164,7 +187,7 @@ main {
     margin: auto;
   }
   .premisesimg {
-    margin: 0 1rem 1rem;
+    margin: 0 1rem 1rem 0;
     float: left;
     width: 50%;
   }
@@ -191,22 +214,51 @@ main {
     margin: 0;
   }
   .coffeewrapper {
+    width: 100%;
+    background: linear-gradient(135deg, #00857c 0%, #35a59d 100%);
+  }
+  .coffeewrapper h2,
+  .coffeewrapper p {
     max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .pdfwrapper {
     width: 100%;
     margin: 0;
   }
   .pdf {
-    height: 800px;
+    max-height: 900px;
+    max-width: 600px;
     margin: auto;
   }
-}
-
-@media screen and (min-width: 1200px) {
-  .pdfwrapper {
-    background: -webkit-gradient(linear, left top, right top, from(#00857c), color-stop(10%, #525659), color-stop(90%, #525659), to(#00857c));
-    background: linear-gradient(to right, #00857c 0%, #525659 10%, #525659 90%, #00857c 100%);
+  .makeacoffee {
+    max-width: none;
+    margin-top: 0;
+  }
+  section.coffeetext {
+    max-width: none;
+    width: 100%;
+    background: linear-gradient(135deg, #00857c 0%, #35a59d 100%);
+  }
+  section.coffeetext h2,
+  section.coffeetext p {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .videowrapper {
+    overflow: hidden;
+    padding-top: 56.25%;
+    position: relative;
+  }
+  .videowrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
