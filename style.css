@@ -104,8 +104,16 @@ main {
 
 .videowrapper {
   overflow: hidden;
+<<<<<<< HEAD
   padding-top: 56.25%;
   position: relative;
+=======
+  padding-bottom: 56.25%;
+  padding-top: 35px;
+  position: relative;
+  height: 0;
+  max-width: 900px;
+>>>>>>> 56a06b7563faf393b2b66b6e19facfad2c353294
 }
 
 .videowrapper iframe {
