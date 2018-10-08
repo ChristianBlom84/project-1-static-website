@@ -218,8 +218,9 @@ main {
         margin: 0;
     }
 
-    .coffeewrapper {
+    section.coffeewrapper {
         width: 100%;
+        max-width: none;
         background: linear-gradient(135deg, #00857c 0%,#35a59d 100%);
         h2,
         p {
@@ -257,10 +258,9 @@ main {
         background: linear-gradient(135deg, #00857c 0%,#35a59d 100%);
         h2,
         p {
-            // color: white;
+            padding: 1rem;
             max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto;
         }
     }
 
