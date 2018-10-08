@@ -253,8 +253,8 @@ main {
   section.coffeetext h2,
   section.coffeetext p {
     max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    padding: 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
