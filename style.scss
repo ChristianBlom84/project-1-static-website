@@ -37,6 +37,21 @@ p {
     margin: 1rem 0;
 }
 
+#skip-to-content {
+    padding: 1em;
+    position: absolute;
+    top: -40px;
+    left: 1em;
+    z-index: 1000;
+    color: white;
+}
+  
+#skip-to-content:focus {
+    position: absolute;
+    top: 0;
+    background: #222;
+}
+
 section,
 div {
     padding: 0 0.5rem;
@@ -66,7 +81,8 @@ div {
             background: $primary-color;
             text-align: center;
             height: 2rem;
-            :hover {
+            :hover,
+            :focus {
                 background: $hover-color;
             }
 
@@ -208,7 +224,7 @@ main {
         clear: both;
     }
 
-    .coffeeguide {
+    #coffeeguide {
         width: 100%;
         display: flex;
         justify-content: center;
@@ -218,10 +234,13 @@ main {
         margin: 0;
     }
 
-    section.coffeewrapper {
+    .textfullwidth {
         width: 100%;
         max-width: none;
         background: linear-gradient(135deg, #00857c 0%,#35a59d 100%);
+    }
+
+    section.coffeewrapper {
         h2,
         p {
             // color: white;
@@ -243,19 +262,11 @@ main {
     }
 
     .makeacoffee {
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-        // flex-flow: column nowrap;
         max-width: none;
         margin-top: 0;
     }
 
     section.coffeetext {
-        // padding-top: 1rem;
-        max-width: none;
-        width: 100%;
-        background: linear-gradient(135deg, #00857c 0%,#35a59d 100%);
         h2,
         p {
             padding: 1rem;
@@ -263,6 +274,10 @@ main {
             margin: 0 auto;
             padding: 1rem;
         }
+    }
+
+    #coffeemenu {
+        max-width: 100%;
     }
 
 }
