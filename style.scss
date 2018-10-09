@@ -1,4 +1,5 @@
 $primary-color: #00857c;
+$gradient-color: #35a59d;
 $hover-color: #093999;
 $pdf-gradient-start: #525659;
 $font-stack: 'Cabin', sans-serif;
@@ -154,8 +155,9 @@ main {
 
 .gridmenu {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 0.5rem;
+    max-width: 900px;
 }
 
 .menuitem {
@@ -268,7 +270,7 @@ main {
     .textfullwidth {
         width: 100%;
         max-width: none;
-        background: linear-gradient(135deg, #00857c 0%,#35a59d 100%);
+        background: linear-gradient(135deg, $primary-color 0%,$gradient-color 100%);
     }
 
     section.coffeewrapper {
@@ -309,7 +311,7 @@ main {
     }
 
     .coffeemenutext {
-        margin: 0 0 0.5rem;
+        margin: 0 0 1rem;
     }
 
     #coffeemenu {
