@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Cabin|Lobster" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <title>Café Koppen</title>
 </head>
 <body>
@@ -21,7 +21,7 @@
                 <li><a href="#coffeeguide" role="menuitem">Kaffeguide</a></li>
                 <li><a href="#coffeemenu" role="menuitem">Meny</a></li>
                 <li><a href="#aboutus" role="menuitem">Om Oss</a></li>
-                <li><a href="#" role="menuitem">Kontakt</a></li>
+                <li><a href="#contactus" role="menuitem">Kontakt</a></li>
             </ul>
         </nav>
     </header>
@@ -57,13 +57,11 @@
             </section>
 
             <div class="pdfwrapper">
-
                 <section class="pdf">
                     <object data="images/kaffemeny.pdf#view=Fit&scrollbar=0&toolbar=0" type="application/pdf">
                         <p>Din browser stödjer inte .pdf-filer. Du kan ladda ner kaffeguiden här: <a aria-label="Ladda ner vår kaffeguide i pdf-format" href="images/kaffemeny.pdf">Ladda ner PDF</a>.</p>
                     </object>
                 </section>
-
             </div>
 
         </article>
@@ -76,16 +74,14 @@
             </section>
 
             <div class="videocontainer">
-
                 <section class="videowrapper">
                     <iframe title="Hur man gör en perfekt cappuccino" src="https://www.youtube.com/embed/gvPetTPFsZM" allowfullscreen></iframe>
                 </section>
-
             </div>
 
         </article>
 
-        <article id="coffeemenu">
+        <article id="coffeemenu" role="article">
 
             <section class="coffeemenutext textfullwidth">
                 <h2>Vår meny</h2>
@@ -94,37 +90,37 @@
         
             <section class="gridmenu">
 
-                <article class="menuitem">
+                <article class="menuitem" role="article">
                     <h2>Kanelbulle</h2>
                     <p>Mjöl, kanel, socker och smör. En enkel men ack så god klassiker.</p>
                     <img src="images/cinnamonrolls.jpg" alt="Kanelbullar" />
                 </article>    
                 
-                <article class="menuitem">
+                <article class="menuitem" role="article">
                     <h2>Morotskaka</h2>
                     <p>Vår morotskaka har 3 lager glasyr, more is more säger vi!</p>
                     <img src="images/carrotcake.jpg" alt="Morotskaka" />
                 </article>
 
-                <article class="menuitem">
+                <article class="menuitem" role="article">
                     <h2>Cupcakes</h2>
                     <p>Små muffins med ett generöst lager glasyr. Nya färger varje dag!</p>
                     <img src="images/cupcake.jpg" alt="Cupcakes" />
                 </article>
 
-                <article class="menuitem">
+                <article class="menuitem" role="article">
                     <h2>Chokladtårta</h2>
                     <p>Vem älskar inte en bit saftig chokladtårta? Perfekt till kaffet.</p>
                     <img src="images/chocolatecake.jpg" alt="Chokladtårta" />
                 </article>
 
-                <article class="menuitem">
+                <article class="menuitem" role="article">
                     <h2>Kakor</h2>
                     <p>Fem sorters kakor, eller kanske 20 sorter? Kaffe med dopp?</p>
                     <img src="images/cookies2.jpg" alt="Kakor" />
                 </article>
 
-                <article class="menuitem">
+                <article class="menuitem" role="article">
                     <h2>Croissant</h2>
                     <p>Croissant med kaffe, fungerar både som frukost och fika.</p>
                     <img src="images/croissant.jpeg" alt="Croissant" />
@@ -134,7 +130,7 @@
 
         </article>
 
-        <article id="aboutus">
+        <article id="aboutus" role="article">
 
             <section class="textfullwidth">
                 <h2>Om oss</h2>
@@ -144,14 +140,14 @@
 
         </article>
 
-        <article id="contactus">
+        <article id="contactus" role="article">
 
-            <section>
+            <section class="contacttext">
                 <h2>Kontakta oss</h2>
-                <p>Du kan alltid ringa oss på <a href="tel:+1555232425">555 - 23 24 25</a> så gör vi vårt bästa för att svara på dina frågor.</p>
+                <p>Du kan alltid ringa oss på <a aria-label="Ring oss" href="tel:+1555232425">555 - 23 24 25</a> så gör vi vårt bästa för att svara på dina frågor.</p>
             </section>
 
-            <section>
+            <section class="mapcontainer">
                 <div class="mapwrapper">
                     <iframe class="googlemap" title="Map of our location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2033.622275717688!2d17.987331815980856!3d59.35595278166815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9deb8f5165e5%3A0xf834ea1cba162801!2sBullens+Bageri+och+Konditori!5e0!3m2!1sen!2sse!4v1539175952831" allowfullscreen></iframe>
                 </div>
@@ -159,7 +155,7 @@
 
         </article>
 
-        <footer>
+        <footer role="contentinfo">
             <p>&copy; 2018 Café Koppen. All rights reserved.</p>
             <a href="#topnav">Tillbaka till toppen</a>
         </footer>
