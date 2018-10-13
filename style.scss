@@ -139,9 +139,11 @@ main {
     grid-template-columns: repeat(auto-fit, minmax($suppliers-width, 1fr));
     grid-gap: 0.5rem;
     align-items: center;
+    padding: 0;
     img {
         width: 100%;
         display: block;
+        margin: auto;
     }
 }
 
@@ -191,14 +193,17 @@ main {
         width: 100%;
         height: auto;
         margin: 0.25rem auto 1rem;
+        border-radius: 50%;
     }
 
     h2 {
         margin: 0.25rem auto;
+        font-size: $font-size-medium * 1.5;
     }
 
     p {
         margin: 0.25rem auto;
+        order: 2;
     }
 }
 
@@ -310,6 +315,12 @@ footer {
     .supplierswrapper {
         margin: 2rem 0;
         clear: both;
+    }
+
+    .suppliers {
+        img {
+            width: 75%;
+        }
     }
 
     #coffeeguide {

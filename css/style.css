@@ -120,11 +120,13 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0;
 }
 
 .suppliers img {
   width: 100%;
   display: block;
+  margin: auto;
 }
 
 .pdf {
@@ -190,14 +192,19 @@ main {
   width: 100%;
   height: auto;
   margin: 0.25rem auto 1rem;
+  border-radius: 50%;
 }
 
 .menuitem h2 {
   margin: 0.25rem auto;
+  font-size: 33px;
 }
 
 .menuitem p {
   margin: 0.25rem auto;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
 }
 
 #aboutus img {
@@ -327,6 +334,9 @@ footer a {
   .supplierswrapper {
     margin: 2rem 0;
     clear: both;
+  }
+  .suppliers img {
+    width: 75%;
   }
   #coffeeguide {
     width: 100%;
