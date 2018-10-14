@@ -333,6 +333,7 @@ footer a {
   }
   .supplierswrapper {
     margin: 2rem 0;
+    clear: both;
   }
   .suppliers img {
     width: 75%;
